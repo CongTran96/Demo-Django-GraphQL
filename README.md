@@ -8,9 +8,9 @@ First, Open cmd with **admin option** and type following.
 
 1. Install python
 
-go to [python installer](https://www.python.org/downloads/release/python-365/) then download and install. Make sure check `add Python to Path` while install python.
+  go to [python installer](https://www.python.org/downloads/release/python-365/) then download and install. Make sure check `add Python to Path` while install python.
 
-Make sure you install python's version <= 3.6. Python 3.7 has problem when interact with django.
+  Make sure you install python's version <= 3.6. Python 3.7 has problem when interact with django.
 
 2. Install Virtualenv
 
