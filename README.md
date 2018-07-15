@@ -62,7 +62,7 @@ then go to [127.0.0.1:8000/admin](http://127.0.0.1:8000/admin/). Login with your
 
 ### 7 Query with GraphQL server
 
-go to [127.0.0.1:8000/graphql](http://127.0.0.1:8000/graphql). Then type some thing like this:
+go to [127.0.0.1:8000/graphql](http://127.0.0.1:8000/graphql). Then type like this. Paste code in the top-left area, after click `play` button in the top-left corner, which next to `GraphiQl`:
 
 + Query all Message
 
