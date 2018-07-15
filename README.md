@@ -6,19 +6,19 @@ Sorry, I'm a bad english.
 
 First, Open cmd with **admin option** and type following.
 
-##### 1 Install python
+### 1 Install python
 
   go to [python installer](https://www.python.org/downloads/release/python-365/) then download and install. Make sure check `add Python to Path` while install python.
 
   Make sure you install python's version <= 3.6. Python 3.7 has problem when interact with django.
 
-##### 2 Install Virtualenv
+### 2 Install Virtualenv
 
 make sure you has been installed pip before.
 
 ``` pip install virtualenv ```
 
-##### 3 Make Virtual Enviroment and active this
+### 3 Make Virtual Enviroment and active this
 
 ``` python -m venv myvenv ```
 
@@ -29,11 +29,11 @@ Active virtualenv
 
 ``` myvenv\Scripts\activate ```
 
-##### 4 Install some library needed
+### 4 Install some library needed
 
 ``` pip install -r requirements.txt ```
 
-##### 5 Go to project, migrate database and make admin user
+### 5 Go to project, migrate database and make admin user
 
 Go to project.
 
@@ -54,13 +54,13 @@ create super user.
 type account, email, password what ever you want.
 
 
-##### 6 Run server and make some example data for Message Model
+### 6 Run server and make some example data for Message Model
 
 Run ``` python manage.py runserver ```
 
 then go to [127.0.0.1:8000/admin](http://127.0.0.1:8000/admin/). Login with your account you have created step before. Then click the ```Messages```.  Click ```ADD MESSAGE``` in the right. Add some message and go to next step.
 
-##### 7 Query with GraphQL server
+### 7 Query with GraphQL server
 
 go to [127.0.0.1:8000/graphql](http://127.0.0.1:8000/graphql). Then type some thing like this:
 
