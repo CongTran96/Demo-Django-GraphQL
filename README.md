@@ -29,16 +29,9 @@ Active virtualenv
 
 ``` myvenv\Scripts\activate ```
 
-4. Upgrade pip and Install django
+4. Install some library needed
 
-Update your pip
-
-``` python -m pip install --upgrade pip ```
-
-Just install django framework in your computer.
-Use django version 1.11.0 for stable and more communication.
-
-``` pip install django~=1.11.0 ```
+``` pip install -r requirements.txt ```
 
 5. Go to project, migrate database and make admin user
 
@@ -61,15 +54,56 @@ create super user.
 type account, email, password what ever you want.
 
 
-6. Install django-graphene for GraphQL
+6. Run server and make some example data for Message Model
 
-Run ``` pip install graphene-django ```
+Run ``` python manage.py runserver ```
 
-7. Install django filter for GraphQL
+then go to [127.0.0.1:8000/admin](http://127.0.0.1:8000/admin/). Login with your account you have created step before. Then click the ```Messages```.  Click ```ADD MESSAGE``` in the right. Add some message and go to next step.
 
-Run ``` pip install django-filter ```
+7. Query with GraphQL server
 
+go to [127.0.0.1:8000/graphql](http://127.0.0.1:8000/graphql). Then type some thing like this:
 
++ Query all Message
 
+```
+    {
+        allMessages {
+            edges {
+            node {
+                id, message
+            }
+            }
+        }
+    }
+```
+
++ Query Message container character
+
+In here, I assumed that Query message contain `ll` character.
+
+```
+{
+  allMessages(message_Icontains: "ll") {
+    edges {
+      node {
+        id, message
+      }
+    }
+  }
+}
+```
+
++ Query Message with Id
+
+In here, I assumed that Query message has id `TWVzc2FnZVR5cGU6MQ==`.
+
+```
+{
+  message(id: "TWVzc2FnZVR5cGU6MQ==") {
+    message
+}
+}
+```
 
 
